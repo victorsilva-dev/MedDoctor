@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Marque sua Consulta - MedDoctor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script defer src="onclick.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <!-- Início da Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #000000;">
+      <!-- Logo na navbar -->
+      <a class="navbar-brand" id="brand-logo" href="./index.html">MedDoctor</a>
+      <!-- Fim da Logo na navbar -->
+
+      <!-- Botão com dropdown da navbar responsiva-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo"
+        aria-controls="navbarTogglerDemo" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+        <!-- Fim do botão com dropdown da navbar responsiva-->
+
+        <!-- Links da navbar -->
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./marqueSuaConsulta.html">Marque Sua Consulta</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./cadastroMedico.html">Cadastro Médico</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./consultasMarcadas.html">Consultas Marcadas</a>
+          </li>
+        </ul>
+        <!-- Fim dos links da navbar -->
+      </div>
+    </nav>
+    <!-- Fim da navbar -->
+    <!-- Background verde água -->
+    <div class="container-fluid bg-info">
+      <!-- Conteúdo principal da página -->
+      <div class="container bg-white">
+        <!-- Primeira row -->
+        <div class="row">
+          <!-- Formulário para marcação de consulta -->
+          <form id="botao" class="col-12 mt-3">
+            <div id="appender" class="jumbotron shadow">
+              <div class="form-group">
+                <h2 class="green-text">Marque sua Consulta</h2>
+                <br />
+                <label>Nome</label>
+                <label id="label-nome"></label>
+                <input type="text" maxlength="256" class="form-control" id="nome" placeholder="João da Silva"
+                  required />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label>CPF</label>
+                  <label id="label-cpf"></label>
+                  <input type="text" minlength="11" maxlength="11" class="form-control" id="cpf"
+                    title="Digite apenas os números do seu CPF" placeholder="78945612378" required />
+                </div>
+                <div class="form-group col-md-3">
+                  <label>Sexo</label>
+                  <label id="label-sexo"></label>
+                  <select id="sexo" class="custom-select" required>
+                    <option value="null" selected>---Selecione---</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-3">
+                  <label>Data de Nascimento</label>
+                  <label id="label-dataNasc"></label>
+                  <input type="date" class="form-control" min="1889-01-01" id="dataNasc" required />
+                </div>
+                <div class="form-group col-md-3">
+                  <label>Nº do Convênio</label>
+                  <label id="label-convenio"></label>
+                  <input type="text" maxlength="10" class="form-control" id="convenio" placeholder="4321876512"
+                    required />
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label>Histórico Médico</label>
+                  <label id="label-historico"></label>
+                  <select id="historico" class="custom-select" required>
+                    <option value="null" selected>---Selecione---</option>
+                    <option value="Primeira Consulta">Primeira Consulta</option>
+                    <option value="Retorno">Retorno</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label>Data da Consulta</label>
+                  <label id="label-consulta"></label>
+                  <input type="date" class="form-control" id="dataConsulta" required />
+                </div>
+                <div class="form-group col-md-4">
+                  <label>Hora</label>
+                  <label id="label-hora"></label>
+                  <select id="hora" class="custom-select" required>
+                    <option value="null" selected>---Selecione---</option>
+                    <option value="08:00">08:00</option>
+                    <option value="08:20">08:20</option>
+                    <option value="08:40">08:40</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:20">09:20</option>
+                    <option value="09:40">09:40</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:20">10:20</option>
+                    <option value="10:40">10:40</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:20">11:20</option>
+                    <option value="11:40">11:40</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:20">12:20</option>
+                    <option value="12:40">12:40</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:20">13:20</option>
+                    <option value="13:40">13:40</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:20">14:20</option>
+                    <option value="14:40">14:40</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:20">15:20</option>
+                    <option value="15:40">15:40</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:20">16:20</option>
+                    <option value="16:40">16:40</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:20">17:20</option>
+                    <option value="17:40">17:40</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label>Médicos Disponíveis</label>
+                  <label id="label-medicos"></label>
+                  <select id="medicos" class="custom-select" required>
+                    <option value="null" selected>---Selecione---</option>
+                  </select>
+                </div>
+                <div class="card mx-auto">
+                  <div class="card-body">
+                    <h3 id="nome-medico" class="card-title"></h3>
+                    <h4 id="especialidade-medico" class="card-title"></h4>
+                    <h5 id="crm-medico" class="card-title">Selecione um Médico</h5>
+                  </div>
+                </div>
+              </div>
+              <button type="button" id="enviar" class="btn btn-info mx-auto mt-4">
+                Marcar Consulta
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Fim da primeira row -->
+      </div>
+      <!-- Conteúdo principal da página -->
+    </div>
+    <!-- Fim do background verde água -->
+
+    <!-- Início do Footer para telas xs e sm-->
+    <footer class="container-fluid d-md-none" style="background-color: #000000;">
+      <div class="row mx-2">
+        <a class=" col-6 mb-2 mt-4 text-white text-left" href="./index.html">Home</a>
+        <a class=" col-6 mb-2 mt-4 text-white text-center" href="./marqueSuaConsulta.html">Marque Sua Consulta</a>
+      </div>
+
+      <div class="row mx-2">
+        <a class=" col-6 mb-2 mt-4 text-white text-left" href="./cadastroMedico.html">Cadastro Médico</a>
+        <a class=" col-6 mb-2 mt-4 text-white text-center" href="./consultasMarcadas.html">Consultas Marcadas</a>
+      </div>
+
+      <div class="green-text text-center border-top border-info">
+        © 2019 - MedDoctor. Todos os direitos reservados.
+      </div>
+    </footer>
+    <!-- Fim do footer para telas xs e sm-->
+
+    <!-- Início do footer para telas md, lg e xl-->
+    <footer class="container-fluid d-none d-md-block" style="background-color: #000000;">
+      <div class="row d-flex">
+        <a class="col mb-4 mt-4 text-white text-center" href="./index.html">Home</a>
+        <a class="col mb-4 mt-4 text-white text-center" href="./marqueSuaConsulta.html">Marque sua Consulta</a>
+        <a class="col mb-4 mt-4 text-white text-center" href="./cadastroMedico.html">Cadastro Médico</a>
+        <a class="col mb-4 mt-4 text-white text-center" href="./consultasMarcadas.html">Consultas Marcadas</a>
+      </div>
+
+      <div class="green-text text-center border-top border-info">
+        © 2019 - MedDoctor. Todos os direitos reservados.
+      </div>
+    </footer>
+    <!-- Fim do footer para telas md, lg e xl-->
+  </main>
+</body>
+<script src="./js/marqueSuaConsulta.js"></script>
+
+</html>

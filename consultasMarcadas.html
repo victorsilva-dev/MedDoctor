@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Consultas Marcadas - MedDoctor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script defer src="onclick.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <!-- Início da Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #000000;">
+      <!-- Logo na navbar -->
+      <a class="navbar-brand" id="brand-logo" href="./index.html">MedDoctor</a>
+      <!-- Fim da Logo na navbar -->
+
+      <!-- Botão com dropdown da navbar responsiva-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo"
+        aria-controls="navbarTogglerDemo" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+        <!-- Fim do botão com dropdown da navbar responsiva-->
+
+        <!-- Links da navbar -->
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./marqueSuaConsulta.html">Marque Sua Consulta</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./cadastroMedico.html">Cadastro Médico</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./consultasMarcadas.html">Consultas Marcadas</a>
+          </li>
+        </ul>
+        <!-- Fim dos links da navbar -->
+      </div>
+    </nav>
+    <!-- Fim da navbar -->
+    <!-- Background verde água -->
+    <div class="container-fluid bg-info">
+      <!-- Conteúdo principal da página -->
+      <div class="container bg-white">
+        <!-- Primeira row -->
+        <div class="row">
+          <!-- Formulário para marcação de consulta -->
+          <form id="botao" class="col-12 mt-3">
+            <div id="appender" class="jumbotron shadow">
+              <h2 class="green-text">Consultas Marcadas</h2>
+              <br>
+              <div id="1" class="jumbotron-light shadow"></div>
+              <div id="2" class="jumbotron-light shadow">""</div>
+              <div id="3" class="jumbotron-light shadow">""</div>
+              <div id="4" class="jumbotron-light shadow">""</div>
+              <div id="5" class="jumbotron-light shadow">""</div>
+              <div id="6" class="jumbotron-light shadow">""</div>
+              <div id="7" class="jumbotron-light shadow">""</div>
+              <div id="8" class="jumbotron-light shadow">""</div>
+              <div id="9" class="jumbotron-light shadow">""</div>
+              <div id="10" class="jumbotron-light shadow">""</div>
+            </div>
+          </form>
+        </div>
+        <!-- Fim da primeira row -->
+      </div>
+      <!-- Conteúdo principal da página -->
+    </div>
+    <!-- Fim do background verde água -->
+
+    <!-- Início do Footer para telas xs e sm-->
+    <footer class="container-fluid d-md-none" style="background-color: #000000;">
+      <div class="row mx-2">
+        <a class=" col-6 mb-2 mt-4 text-white text-left" href="./index.html">Home</a>
+        <a class=" col-6 mb-2 mt-4 text-white text-center" href="./marqueSuaConsulta.html">Marque Sua Consulta</a>
+      </div>
+
+      <div class="row mx-2">
+        <a class=" col-6 mb-2 mt-4 text-white text-left" href="./cadastroMedico.html">Cadastro Médico</a>
+        <a class=" col-6 mb-2 mt-4 text-white text-center" href="./consultasMarcadas.html">Consultas Marcadas</a>
+      </div>
+
+      <div class="green-text text-center border-top border-info">
+        © 2019 - MedDoctor. Todos os direitos reservados.
+      </div>
+    </footer>
+    <!-- Fim do footer para telas xs e sm-->
+
+    <!-- Início do footer para telas md, lg e xl-->
+    <footer class="container-fluid d-none d-md-block" style="background-color: #000000;">
+      <div class="row d-flex">
+        <a class="col mb-4 mt-4 text-white text-center" href="./index.html">Home</a>
+        <a class="col mb-4 mt-4 text-white text-center" href="./marqueSuaConsulta.html">Marque sua Consulta</a>
+        <a class="col mb-4 mt-4 text-white text-center" href="./cadastroMedico.html">Cadastro Médico</a>
+        <a class="col mb-4 mt-4 text-white text-center" href="./consultasMarcadas.html">Consultas Marcadas</a>
+      </div>
+
+      <div class="green-text text-center border-top border-info">
+        © 2019 - MedDoctor. Todos os direitos reservados.
+      </div>
+    </footer>
+    <!-- Fim do footer para telas md, lg e xl-->
+  </main>
+</body>
+<script src="./js/consultasMarcadas.js"></script>
+</html>
